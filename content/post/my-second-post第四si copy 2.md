@@ -8,12 +8,10 @@ excerpt: 发现一个轻量级灵活的开源多 AI 智能体协调框架：Agen
 draft: false
 ---
 
-![00](/images/00.jpg)
-
 能够根据我们发送的内容智能路由到最合适的 AI 智能体，并在不同智能体之间维持对话上下文。
 
 GitHub：github.com/awslabs/agent-squad
-
+![00](/images/00.jpg)
 主要特性：
 
 - 智能意图分类，根据上下文将查询动态路由到最合适的智能体；
