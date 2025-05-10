@@ -1,0 +1,73 @@
+.chapter-progress-container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1140px;
+    z-index: 0;
+    position: fixed;
+    top: 30%;
+    left: calc((100% - 800px) / 2 - 171px); /* 根据正文宽度(800px)计算左侧位置 */
+    animation-name: chapter-progress-fade-in;
+    animation-duration: 0.5s;
+
+    @media screen and (max-width: 1280px) {
+        display: none;
+    }
+}
+
+@keyframes chapter-progress-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes chapter-progress-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.chapter-progress-align {
+    position: fixed;
+    display: flex;
+    transform: translateY(0px);
+    top: 0;
+    align-items: center;
+    height: 100vh;
+    z-index: 3;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s linear, visibility 0.4s linear;
+}
+
+.chapter-progress-overlap {
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.chapter-progress-track {
+    position: relative;
+    outline: none;
+    user-select: none;
+}
+
+.chapter-progress-line {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+    max-height: 600px;
+    width: 0.5px;
+    background-color: var(--track);
+    opacity: 0.6;
+    overflow: hidden;
+}
+
+.chapter-progress-indicator {
+    position: absolute;
+    height: 100%;
+    top: -100%;
+    width: 0.5px;
+    background-color: var(--progress);
+    left: 0;
+    transition: transform 0.1s ease-out;
+} 

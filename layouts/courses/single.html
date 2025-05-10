@@ -1,6 +1,8 @@
 {{ define "main" }}
 <section class="section narrow article-content-wrapper"> {{/* 使用与文章类似的容器 */}}
 
+    {{ partial "courses/chapter-progress.html" . }}
+
     <header class="chapter-content-header" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
         {{/* 1. 显示章节标题 */}}
         <h1 class="article-hero-heading chapter-main-title">{{ .Title }}</h1>
@@ -29,4 +31,7 @@
     </article>
 
 </section>
+
+{{ $script := resources.Get "js/chapter-progress.js" }}
+<script src="{{ $script.RelPermalink }}"></script>
 {{ end }}
