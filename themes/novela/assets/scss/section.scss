@@ -12,18 +12,16 @@
     /*PHABLET*/
     @media screen and (max-width: 540px){
         max-width: 100%;
-        padding: 2rem;;
+        padding: 0 1rem;
     }
 
     p{
         /*TABLET*/
         @media screen and (max-width: 735px){
-            padding: 0 4rem;
+            padding: 0 2rem;
             max-width: 567px;
         }
     }
-
-    
 }
 
 .narrow{

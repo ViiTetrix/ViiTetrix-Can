@@ -239,10 +239,23 @@
             align-items: center;
 }
 
+/*TABLET*/
+@media screen and (max-width: 735px){
+    .nav-controls{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: 10px;
+    }
+}
+
 /*PHABLET*/
 @media screen and (max-width: 540px){
     .nav-controls{
         right: -5px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
     }
 }
 
