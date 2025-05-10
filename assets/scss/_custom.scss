@@ -153,7 +153,7 @@
         font-family: "lxgw neo zhisong", "LXGW WenKai", "LXGW Neo ZhiSong", "LXGW Bright", ZCOOL XiaoWei, var(--serif); // 优先使用霞鹜新致宋，并提供备选
         font-size: 18px !important;       // 强制与文章页一致
         line-height: 1.756 !important;    // (31.608px / 18px) 强制与文章页一致
-        max-width: 1800px !important;      // 强制与文章页一致
+        max-width: 1200px !important;      // 强制与文章页一致
 
         // 确保左右有合适的间距，使其居中 (如果 max-width 生效，auto margin会使其居中)
         // 主题的 .narrow 类或 .section 类可能已经处理了居中，但以防万一

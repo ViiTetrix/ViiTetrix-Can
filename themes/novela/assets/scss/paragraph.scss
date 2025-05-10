@@ -1,3 +1,17 @@
+.article-content p {
+    max-width: 1200px;
+}
+@media screen and (max-width: 1024px) {
+    .article-content p {
+        max-width: 1200px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .article-content p {
+        max-width: 100%;
+    }
+}
+
 p{
     line-height: 1.756;
     font-size: 18px;
