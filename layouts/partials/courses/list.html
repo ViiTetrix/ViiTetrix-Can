@@ -1,0 +1,60 @@
+<section class="section nartrow"> {{/* 再次提醒：nartrow 可能是 narrow 的笔误 */}}
+  <div id="coursesList" class="articles-list-container show-details">
+      {{ $courses := .Pages }}
+      {{ $paginator := .Paginate $courses (.Site.Params.articles.paginate | default 14) }}
+      {{ $biggerFirst := true }}
+      {{ $biggerPlaced := false }}
+      {{ range $index, $course := $paginator.Pages }}
+          {{ $counter := mod $index 2 }}
+          {{ if not $counter }}
+              <div class="post-row">
+          {{ end }}
+          <a href="{{ $course.RelPermalink }}" class="article-link"
+          {{ if and (eq ($biggerFirst) true) (eq ($biggerPlaced) false) }}
+            {{ if eq $counter 0 }}
+              id="article-link-bigger"
+              {{ $biggerPlaced = true }}
+            {{ end }}
+          {{ else if and (not $biggerFirst) (not $biggerPlaced) }}
+            {{ if ne $counter 0 }}
+              id="article-link-bigger"
+              {{ $biggerPlaced = true }}
+            {{ end }}
+          {{ end }}>
+            <div class="article-data-outer">
+              <div class="image-container">
+                <img src="{{ $course.Params.hero | absURL }}" class="article-image" alt="Hero for {{ $course.Params.title | default $course.Title }}" />
+              </div>
+              <div class="article-data">
+                <h2 class="article-title" style="margin-bottom: 15px;">
+                  {{ $course.Params.title }}
+                  {{ with $course.Params.subtitle }}
+                  <span class="article-subtitle" style="font-weight: normal; font-size: 16px; color: var(--grey); margin-bottom: 10px; margin-left: 0.5em; vertical-align: baseline;">
+                    {{ . }}
+                  </span>
+                  {{ end }}
+                </h2>
+                <div class="article-metadata">
+                  {{ $course.Params.author }}
+                </div>
+                <p class="article-description" style="font-size: 16px; color: var(--grey); margin-bottom: 10px;">
+                  {{ $course.Params.description }}
+                </p>
+              </div>
+            </div>
+          </a>
+          {{ $counter := mod (add $index 1) 2 }}
+          {{ $lenPaginator := len $paginator.Pages }}
+          {{ if or (eq $counter 0) (eq (add $index 1) $lenPaginator) }}
+              </div>
+              {{ $biggerPlaced = false }}
+              {{ if $biggerFirst }}
+                {{ $biggerFirst = false }}
+              {{ else }}
+                {{ $biggerFirst = true }}
+              {{ end }}
+          {{ end }}
+      {{ end }}
+  </div>
+  {{ partial "paginator/paginator.html" . }}
+</section>

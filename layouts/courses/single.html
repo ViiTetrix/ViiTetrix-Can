@@ -1,0 +1,32 @@
+{{ define "main" }}
+<section class="section narrow article-content-wrapper"> {{/* 使用与文章类似的容器 */}}
+
+    <header class="chapter-content-header" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+        {{/* 1. 显示章节标题 */}}
+        <h1 class="article-hero-heading chapter-main-title">{{ .Title }}</h1>
+
+        {{/* 2. 显示章节描述 */}}
+        {{ with .Description }}
+            <p class="chapter-page-description">{{ . }}</p> {{/* 使用新的类名 */}}
+        {{ end }}
+
+        {{/* (可选) 显示作者等元信息 */}}
+        {{ with .Params.author }}
+            <p class="chapter-author-meta" style="font-size: 0.9em; color: var(--grey); margin-top: 0.5rem;">作者: {{ . }}</p>
+        {{ end }}
+    </header>
+
+    {{/* 3. (可选) 如果章节有 Hero 图片 */}}
+    {{ with .Params.hero }}
+        <div class="article-hero-image chapter-hero-image" style="margin-bottom: 2rem;">
+            <img src="{{ . | absURL }}" alt="{{ $.Title }} hero image" style="width: 100%; height: auto; border-radius: 4px;">
+        </div>
+    {{ end }}
+
+    {{/* 4. 显示章节主要内容 */}}
+    <article id="articleContent" class="post-content heti article-content">
+        {{ .Content }}
+    </article>
+
+</section>
+{{ end }}

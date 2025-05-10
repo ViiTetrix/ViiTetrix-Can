@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section class="section narrow">
+
+    <div class="article-hero">
+        <header class="article-header">
+            <h1 class="article-hero-heading main-title-with-inline-subtitle">
+                {{ .Title }}
+                {{ with .Params.subtitle }}
+                    <span class="inline-subtitle-text">{{ . }}</span>
+                {{ end }}
+            </h1>
+        
+            <div class="article-hero-subtitle">
+                 <div class="article-meta">
+                    {{ if or .Params.authors .Params.author }}
+                        {{ partial "article/authors.html" . }}
+                    {{ end }}
+                </div>
+            </div>
+            {{ with .Description }}
+                <p class="course-description-frontmatter-custom" style="font-size: 0.9em; color: var(--grey);">{{ . }}</p>
+            {{ end }}
+        </header>
+
+        {{ with .Params.hero }}
+        <div class="article-hero-image course-hero-image" id="CourseImage__Hero">
+            <img src="{{ . | absURL }}" alt="{{ $.Title }} hero image">
+        </div>
+        {{ end }}
+    </div>
+
+    {{ if ne .Content "" }}
+        <article id="courseMainContent" class="post-content heti article-content" style="position:relative; margin-top: 2rem;">
+            {{ .Content }}
+        </article>
+    {{ end }}
+
+    {{ partial "courses/chapters.html" . }}
+
+</section>
+{{ end }}

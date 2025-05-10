@@ -1,0 +1,48 @@
+baseURL: https://blog.viitetrix.com
+languageCode: zh-cn
+title: ViiTetrix Can
+theme: novela
+
+taxonomies:
+  author: authors
+
+# 设置文章页面的分页大小
+params:
+  articles:
+    paginate: 14
+  bioAuthor: ViiTetrix  # 指定要显示的作者
+  social:
+    weibo:
+      url: "https://weibo.com/viitetrix"
+    bilibili:
+      url: "https://space.bilibili.com/3494362365299047"
+    douyin:
+      url: "https://www.douyin.com/user/MS4wLjABAAAAmDaQ-Qj009ky9i_IPo-DKvZq88Fh6Y_CdDMAScoXZg2GhZVRj45LKjwM64mnxyOL"
+    rednote:
+      url: "https://www.xiaohongshu.com/user/profile/6524a23d000000002a028e83"
+    X:
+      url: "https://x.com/ViiTetrix"
+    youtube:
+      url: "https://www.youtube.com/@ViiTetrix"
+  
+
+menu:
+  main:
+    - name: 文 章
+      url: /articles/
+      weight: 10
+    - name: 课 程
+      url: /courses/
+      weight: 20
+    - name: 作 者
+      url: /authors/
+      weight: 30
+    - name: 搜 索
+      url: /search/
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON #

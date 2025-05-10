@@ -1,0 +1,121 @@
+// your-project-root/assets/scss/_search_styles.scss
+
+// Helper mixin for media queries if needed, Novela might have its own.
+// You can copy breakpoints from Novela's vars.scss if they are defined as SCSS variables there.
+// For now, we'll assume these CSS vars are globally available.
+
+// --- Search Page Specific Styles ---
+
+// Search input area
+#searchbox {
+  margin-top: 8rem;
+  margin-bottom: 2.5rem;
+  display: block;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-family: "LXGW Neo ZhiSong", "ZSFT-332", var(--sanserif);
+  font-size: 18px;
+  line-height: 1.756;
+  color: var(--articleText);
+  background-color: var(--inputBackground);
+  border: 1px solid var(--horizontalRule);
+  border-radius: 6px;
+  transition: border-color 0.2s var(--ease-in-out-quad), box-shadow 0.2s var(--ease-in-out-quad);
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: var(--secondary);
+    opacity: 0.8;
+    font-family: "LXGW Neo ZhiSong", "ZSFT-332", var(--sanserif);
+    font-size: 18px;
+    line-height: 1.756;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+}
+
+// Search results area
+#searchResults {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+
+  li.post-entry {
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    background-color: var(--card);
+    border: 1px solid var(--horizontalRule);
+    border-radius: 8px;
+    transition: background-color 0.2s var(--ease-in-out-quad), transform 0.2s var(--ease-in-out-quad);
+
+    &:hover {
+      background-color: var(--hover);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    header.entry-header {
+      font-family: "LXGW Neo ZhiSong", "ZSFT-332", var(--sanserif);
+      font-size: 18px;
+      color: var(--articleText);
+      margin: 0;
+      transition: color 0.2s var(--ease-in-out-quad);
+    }
+  }
+}
+
+// Search Page Title Area
+.page-header {
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-family: var(--sanserif);
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .post-description {
+    font-family: var(--sanserif);
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-top: 0.5rem;
+  }
+}
+
+// 响应式布局调整
+@media screen and (max-width: 768px) {
+  #searchbox {
+    margin-top: 6rem;
+    padding: 0 15px;
+  }
+
+  .page-header {
+    margin-top: 3rem;
+    padding: 0 15px;
+
+    h1 {
+      font-size: 32px;
+    }
+  }
+}

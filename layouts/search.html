@@ -1,0 +1,34 @@
+{{- define "main" }}
+
+<header class="page-header">
+    <h1>{{- .Title | htmlUnescape -}}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+        {{- /* partial "translation_list.html" . */ -}}  <!-- 注释掉这一行 -->
+        <!-- 或者直接删除上面一行和外层的 post-meta div (如果它里面没有其他东西了) -->
+    </div>
+    {{- end }}
+</header>
+
+<div id="searchbox">
+    <input id="searchInput" autofocus placeholder="{{ .Params.placeholder | default (printf "%s ↵" .Title) }}"
+        aria-label="search" type="search" autocomplete="off" maxlength="64">
+    <ul id="searchResults" aria-label="search results"></ul>
+</div>
+
+{{ $fuseJs := resources.Get "js/fuse.basic.min.js" }}
+{{ $searchJs := resources.Get "js/fastsearch.js" | js.Build (dict "params" .Site.Params.fuseOpts) }}
+
+{{ if and $fuseJs $searchJs }}
+<script src="{{ $fuseJs.RelPermalink }}" defer></script>
+<script src="{{ $searchJs.RelPermalink }}" defer></script>
+{{ else }}
+  {{ warnf "Fuse.js or search.js not found in assets. Search will not work." }}
+{{ end }}
+
+{{- end }}{{/* end main */}}

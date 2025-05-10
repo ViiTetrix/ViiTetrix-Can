@@ -1,0 +1,19 @@
+<section class="section narrow">
+    <div class="chapters-list">
+        {{ range .Pages }}
+            <a href="{{ .RelPermalink }}" class="chapter-link">
+                <div class="chapter-data">
+                    <h2 class="chapter-title">
+                        {{ .Params.title }}
+                    </h2>
+                    <p class="chapter-excerpt">
+                        {{ .Params.excerpt }}
+                    </p>
+                    <div class="chapter-metadata">
+                        {{ .Params.author }}
+                    </div>
+                </div>
+            </a>
+        {{ end }}
+    </div>
+</section> 
