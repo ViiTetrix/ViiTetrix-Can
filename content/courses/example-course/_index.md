@@ -4,7 +4,6 @@ description: "这是一个示例课程所以看看到底有多长，最起码得
 hero: "/images/post/hero-3.jpg"
 authors:
     - ViiTetrix
-    - LetS
 subtitle: "示例课程的副标题"
 layout: section
 ---

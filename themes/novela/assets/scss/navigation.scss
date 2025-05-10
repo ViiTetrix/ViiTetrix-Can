@@ -126,15 +126,18 @@
     display: flex;
     align-items: center;
     margin: 0 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .nav-link {
     color: var(--grey);
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 600;
     text-decoration: none;
-    margin: 0 48px;
+    margin: 0 18px;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-link:visited {
@@ -164,8 +167,9 @@
 
 @media screen and (max-width: 800px) {
     .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
     }
     .nav-link {
         margin: 0 8px;
