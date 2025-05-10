@@ -1,0 +1,25 @@
+<Section class="section" relative id="Articles__Hero">
+    <div class="heading-container">
+        <div class="hero-title-block">
+            <h1 class="hero-heading">{{ replace .Page.Params.hero.heading "，" "，<br>" | safeHTML }}</h1>
+            <div class="hero-subtext-en">Should reflections conspire in recursive ritual,<br>vision atomizes in blinding glare.</div>
+        </div>
+        <div class="hero-image-block">
+            <img src="/images/00.jpg" class="hero-side-image">
+        </div>
+    </div>
+    <div class="subheading-container">
+        {{ partial "bio.html" . }}
+        <div class="grid-controls-container">
+            <button id="btnGrid" class="grid-button">
+                {{ partial "icons/ui/tiles.html" . }}
+            </button>
+            <button id="btnRows" class="grid-button">
+                {{ partial "icons/ui/rows.html" . }}
+            </button>
+        </div>
+    </div>
+</Section>
+
+{{ $script := resources.Get "js/toggleLayout.js" }}
+<script src="{{ $script.RelPermalink }}"></script>

@@ -1,0 +1,70 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/logo/favicon.png">
+    {{ $style := resources.Get "scss/global.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ $prism := resources.Get "css/prism.css" }}
+    <link rel="stylesheet" href="{{ $prism.RelPermalink }}" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/166/main/result.css">
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/183/main/result.css">
+    <link rel="stylesheet" href="https://fontsapi.zeoseven.com/22/main/result.css">
+    <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
+    <style>
+        @font-face {
+            font-family: "ZSFT-332";
+            src: url("https://fontsapi.zeoseven.com/332/main.woff2") format('woff2'),
+                url("https://fontsapi-storage.zeoseven.com/332/main.woff2") format('woff2');
+            font-display: swap;
+        }
+    </style>
+    <style>
+        .article-content {
+            max-width: 749px;
+            margin: 0 auto;
+            padding: 0 20px;
+            padding-top: 160px;
+            padding-bottom: 100px;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin: 1em 0;
+            padding-left: 1.5em;
+        }
+
+        .article-content ul ul,
+        .article-content ul ol,
+        .article-content ol ul,
+        .article-content ol ol {
+            margin: 0.4em 0;  /* 减小子级列表的上下间距 */
+            padding-left: 1.2em;
+        }
+
+        .article-content li {
+            margin-bottom: 0.4em;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .article-content {
+                max-width: 480px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .article-content {
+                padding: 0 40px;
+                padding-top: 160px;
+                padding-bottom: 60px;
+            }
+        }
+    </style>
+
+    {{ partial "seo/print.html" . }}
+    {{ with .Params.forestry_instant_preview_id }}
+      {{- safeHTML (printf "<meta property='forestry_instant_preview_id' content='%s'>" .) -}}
+    {{ end -}}
+</head>
+

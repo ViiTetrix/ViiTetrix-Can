@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <h1 style="color: darkred; background-color: lightyellow; padding: 10px; border: 5px solid darkred;">
+    DEBUG: THIS PAGE IS RENDERED BY THEME'S _default/list.html
+  </h1>
+  <p>Page Kind: {{ .Kind }}</p>
+  <p>Page Section: {{ .Section }}</p>
+  <p>Page Type: {{ .Type }}</p>
+  <p>Page Title: {{ .Title }}</p>
+  <hr>
+  {{/* Original content below, you can keep it or comment it out for testing */}}
+  {{/* partial "articles/hero.html" . */}}
+  {{/* partial "articles/articles.html" . */}}
+{{ end }}

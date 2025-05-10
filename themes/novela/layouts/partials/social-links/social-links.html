@@ -1,0 +1,12 @@
+<div class="social-icon-outer">
+    <div class="social-icon-container">
+        {{ $socialOrder := slice "weibo" "bilibili" "douyin" "rednote" "X" "youtube" }}
+        {{ range $key := $socialOrder }}
+            {{ with (index $.Site.Params.social $key).url }}
+                {{ $path := print "icons/social/" $key }}
+                <a href="{{ . }}">{{ partial $path $ }}</a>
+                <span class="hidden">{{ . }}</span>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
