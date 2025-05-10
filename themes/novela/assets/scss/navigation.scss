@@ -608,28 +608,41 @@
 
 @media screen and (max-width: 540px) {
     .nav-container {
+        display: flex;
+        align-items: center;
         padding-top: 30px;
         padding-left: 8px;
         padding-right: 8px;
     }
     .logo-link {
         max-width: 36px;
+        min-width: 36px;
         padding-right: 6px;
+        flex-shrink: 0;
     }
     .nav-menu {
-        flex: 1 1 auto;
+        flex: 1 1 0;
         min-width: 0;
-        margin: 0 2px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
     }
     .nav-link {
         font-size: 14px;
         margin: 0 4px;
         min-width: 32px;
         padding: 0 2px;
+        display: inline-block;
     }
     .nav-controls {
         flex-shrink: 0;
+        max-width: 36px;
+        min-width: 36px;
         margin-left: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
     .icon-wrapper {
         width: 28px;
