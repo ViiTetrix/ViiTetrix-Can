@@ -227,3 +227,28 @@
         margin: 1.5em 0;
     }
 }
+
+// 课程目录链接样式
+.chapters-list .chapter-link {
+  text-decoration: none !important;
+  color: var(--articleText) !important;
+  transition: color 0.3s ease;
+
+  .chapter-title,
+  .chapter-excerpt,
+  .chapter-metadata {
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    text-decoration: none !important;
+    color: var(--accent) !important;
+
+    .chapter-title,
+    .chapter-excerpt,
+    .chapter-metadata {
+      color: inherit;
+    }
+  }
+}

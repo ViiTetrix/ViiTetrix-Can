@@ -19,15 +19,16 @@ else{
 
 footerSection = 150;
 
-bottomOffset = ((articleSubscription + articleNext + footerSection + 250) / document.body.scrollHeight) * 100 ;
-bottomOffset += bottomOffset * 1.1;
-
+bottomOffset = ((articleSubscription + articleNext + footerSection) / document.body.scrollHeight) * 100;
 
 function updateProgress(){
-    let percentScrolled = (window.pageYOffset / document.body.scrollHeight) * (100 + bottomOffset);
+    let percentScrolled = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
+    
+    percentScrolled = Math.min(percentScrolled, 100);
+    
     scrollProgress.style.transform = "translateY(" + percentScrolled + "%)";
 
-    if (percentScrolled > 100){
+    if (percentScrolled >= 95){
         progressBar.style.animationName = "progress-fade-out";
         setTimeout(function(){
             progressBar.style.opacity = "0";
