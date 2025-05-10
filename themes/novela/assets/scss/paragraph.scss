@@ -1,9 +1,9 @@
 .article-content p {
-    max-width: 1200px;
+    max-width: 800px;
 }
 @media screen and (max-width: 1024px) {
     .article-content p {
-        max-width: 1200px;
+        max-width: 800px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -41,6 +41,8 @@ p b {
     p{
         max-width: 486px;
         margin: 0 auto 25px;
+        font-size: 17px;
+        line-height: 1.7;
     }
 }
 

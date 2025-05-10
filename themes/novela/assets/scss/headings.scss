@@ -55,6 +55,22 @@ h6{
     }
 }
 
+/* 添加平板端专门样式 */
+@media screen and (min-width: 736px) and (max-width: 1024px) {
+    h1 {
+        font-size: 42px;
+        line-height: 1.25;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+}
+
 @media screen and (max-width: 737px){
     h1, h2{
         margin: 30px auto 18px;

@@ -153,7 +153,7 @@
         font-family: "lxgw neo zhisong", "LXGW WenKai", "LXGW Neo ZhiSong", "LXGW Bright", ZCOOL XiaoWei, var(--serif); // 优先使用霞鹜新致宋，并提供备选
         font-size: 18px !important;       // 强制与文章页一致
         line-height: 1.756 !important;    // (31.608px / 18px) 强制与文章页一致
-        max-width: 1200px !important;      // 强制与文章页一致
+        max-width: 800px !important;      // 强制与文章页一致
 
         // 确保左右有合适的间距，使其居中 (如果 max-width 生效，auto margin会使其居中)
         // 主题的 .narrow 类或 .section 类可能已经处理了居中，但以防万一
@@ -162,7 +162,7 @@
 
         // 响应式布局
         @media screen and (max-width: 1024px) {
-            max-width: 1200px !important;
+            max-width: 800px !important;
             padding-left: 10px !important;
             padding-right: 10px !important;
         }
@@ -177,5 +177,53 @@
         p {
             // margin-bottom: 1em; // 示例
         }
+    }
+}
+
+// 全局 heti 样式配置
+.heti {
+    // 基础样式
+    font-family: "LXGW Neo ZhiSong", "ZSFT-332", var(--sanserif);
+    font-size: 18px;
+    line-height: 1.756;
+    max-width: 800px;
+    margin: 0 auto;
+
+    // 响应式布局
+    @media screen and (max-width: 1024px) {
+        max-width: 800px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    // 段落样式
+    p {
+        margin-bottom: 1.5em;
+    }
+
+    // 列表样式
+    ul, ol {
+        margin: 1em 0;
+        padding-left: 1.5em;
+    }
+
+    // 引用样式
+    blockquote {
+        margin: 1.5em 0;
+        padding-left: 1em;
+        border-left: 4px solid var(--horizontalRule);
+    }
+
+    // 代码块样式
+    pre {
+        margin: 1.5em 0;
     }
 }

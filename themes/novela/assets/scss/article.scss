@@ -85,6 +85,13 @@
         font-size: 36px;
     }
 
+    /* 添加平板端专门样式 */
+    @media screen and (min-width: 736px) and (max-width: 1024px) {
+        font-size: 42px;
+        line-height: 1.35;
+        margin-bottom: 22px;
+    }
+
     @media screen and (max-width: $phablet){
         font-size: 32px;
     }
@@ -102,6 +109,12 @@
     font-size: 18px;
     color: var(--grey);
     font-family: "LXGW Neo ZhiSong", "ZSFT-332", var(--sanserif);
+
+    /* 添加平板端专门样式 */
+    @media screen and (min-width: 736px) and (max-width: 1024px) {
+        font-size: 17px;
+        line-height: 1.6;
+    }
 
     /*PHABLET*/
     @media screen and (max-width: $phablet){
