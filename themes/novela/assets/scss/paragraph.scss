@@ -8,7 +8,7 @@ p{
     transition: var(--color-mode-transition);
     margin: 0 auto 35px;
     width: 100%;
-    max-width: 680px;
+    max-width: 1000px;
 }
 
 p b {
@@ -18,14 +18,14 @@ p b {
 /*DESKTOP*/
 @media screen and (max-width: 1070px){
     p{
-        max-width: 507px;
+        max-width: 1000px;
     }
 }
 
 /*TABLET*/
 @media screen and (max-width: 735px){
     p{
-        max-width: 720px;
+        max-width: 1100px;
         margin: 0 auto 25px;
     }
 }
@@ -33,7 +33,7 @@ p b {
 /*PHABLET*/
 @media screen and (max-width: 540px){
     p{
-        padding: 0 25px;
+        padding: 0 40px;
         max-width: 100%;
     }
 }

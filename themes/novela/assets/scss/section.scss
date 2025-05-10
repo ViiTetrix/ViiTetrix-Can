@@ -1,25 +1,25 @@
 .section{
     width: 100%;
-    max-width: 1220px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 4rem;
 
     /*DESKTOP*/
     @media screen and (max-width: 1070px){
-        max-width: 1000px;
+        max-width: 1600px;
     }
 
     /*PHABLET*/
     @media screen and (max-width: 540px){
         max-width: 100%;
-        padding: 0 2.5rem;
+        padding: 0 4rem;
     }
 
     p{
         /*TABLET*/
         @media screen and (max-width: 735px){
-            padding: 0 3rem;
-            max-width: 720px;
+            padding: 0 4.5rem;
+            max-width: 1100px;
         }
     }
 }
@@ -28,8 +28,8 @@
     p{
         /*TABLET*/
         @media screen and (max-width: 735px){
-            padding: 0 2rem;
-            max-width: 527px;
+            padding: 0 4.5rem;
+            max-width: 1100px;
         }
     }
     
