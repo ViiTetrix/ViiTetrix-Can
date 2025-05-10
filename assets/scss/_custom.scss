@@ -153,17 +153,25 @@
         font-family: "lxgw neo zhisong", "LXGW WenKai", "LXGW Neo ZhiSong", "LXGW Bright", ZCOOL XiaoWei, var(--serif); // 优先使用霞鹜新致宋，并提供备选
         font-size: 18px !important;       // 强制与文章页一致
         line-height: 1.756 !important;    // (31.608px / 18px) 强制与文章页一致
-        max-width: 680px !important;      // 强制与文章页一致
+        max-width: 1800px !important;      // 强制与文章页一致
 
         // 确保左右有合适的间距，使其居中 (如果 max-width 生效，auto margin会使其居中)
         // 主题的 .narrow 类或 .section 类可能已经处理了居中，但以防万一
         margin-left: auto;
         margin-right: auto;
 
-        // 如果文章页的 .post-content 有特定的左右 padding 而不是 margin,
-        // 则在这里也加上相同的 padding:
-        // padding-left: 15px; // 示例，根据文章页实际情况调整
-        // padding-right: 15px; // 示例
+        // 响应式布局
+        @media screen and (max-width: 1024px) {
+            max-width: 1200px !important;
+            padding-left: 30px !important;
+            padding-right: 30px !important;
+        }
+
+        @media screen and (max-width: 768px) {
+            max-width: 100% !important;
+            padding-left: 40px !important;
+            padding-right: 40px !important;
+        }
 
         // 确保段落等元素有合适的上下间距 (Novela的heti类应该会处理一部分)
         p {
