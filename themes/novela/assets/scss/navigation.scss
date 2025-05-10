@@ -605,3 +605,35 @@
         left: -15px;
     }
 }
+
+@media screen and (max-width: 540px) {
+    .nav-container {
+        padding-top: 30px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .logo-link {
+        max-width: 36px;
+        padding-right: 6px;
+    }
+    .nav-menu {
+        flex: 1 1 auto;
+        min-width: 0;
+        margin: 0 2px;
+    }
+    .nav-link {
+        font-size: 14px;
+        margin: 0 4px;
+        min-width: 32px;
+        padding: 0 2px;
+    }
+    .nav-controls {
+        flex-shrink: 0;
+        margin-left: 4px;
+    }
+    .icon-wrapper {
+        width: 28px;
+        height: 18px;
+        margin-left: 8px;
+    }
+}
