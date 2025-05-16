@@ -2,7 +2,7 @@
 function isChapterPage() {
     const path = window.location.pathname;
     const pathParts = path.split('/').filter(Boolean);
-    return pathParts.length === 3 && pathParts[0] === 'courses';
+    return pathParts.length === 3 && pathParts[0] === 'collections';
 }
 
 // 只在课程章节页面初始化进度条

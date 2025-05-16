@@ -10,16 +10,16 @@ let isList = false;
 
 function adjustListAtMobile() {
     const articlesList = document.getElementById("articlesList");
-    const coursesList = document.getElementById("coursesList");
+    const collectionsList = document.getElementById("collectionsList");
     
     if (listRemoveWidth.matches) {
         if (articlesList) articlesList.classList.remove("articles-list-container-alt");
-        if (coursesList) coursesList.classList.remove("articles-list-container-alt");
+        if (collectionsList) collectionsList.classList.remove("articles-list-container-alt");
         applyExcerptGridStyle();
         applyDescriptionGridStyle();
     } else if (listAddWidth.matches && isList === true) {
         if (articlesList) articlesList.classList.add("articles-list-container-alt");
-        if (coursesList) coursesList.classList.add("articles-list-container-alt");
+        if (collectionsList) collectionsList.classList.add("articles-list-container-alt");
         applyExcerptRowStyle();
         applyDescriptionRowStyle();
     }
@@ -27,10 +27,10 @@ function adjustListAtMobile() {
 
 function makeGrid() {
     const articlesList = document.getElementById("articlesList");
-    const coursesList = document.getElementById("coursesList");
+    const collectionsList = document.getElementById("collectionsList");
     
     if (articlesList) articlesList.classList.remove("articles-list-container-alt");
-    if (coursesList) coursesList.classList.remove("articles-list-container-alt");
+    if (collectionsList) collectionsList.classList.remove("articles-list-container-alt");
     
     document.getElementById("tiles").style.fill = "var(--primary)";
     document.getElementById("rows").style.fill = "var(--grey)";
@@ -41,10 +41,10 @@ function makeGrid() {
 
 function makeRows() {
     const articlesList = document.getElementById("articlesList");
-    const coursesList = document.getElementById("coursesList");
+    const collectionsList = document.getElementById("collectionsList");
     
     if (articlesList) articlesList.classList.add("articles-list-container-alt");
-    if (coursesList) coursesList.classList.add("articles-list-container-alt");
+    if (collectionsList) collectionsList.classList.add("articles-list-container-alt");
     
     document.getElementById("rows").style.fill = "var(--primary)";
     document.getElementById("tiles").style.fill = "var(--grey)";

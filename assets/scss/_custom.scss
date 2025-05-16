@@ -34,32 +34,24 @@
     // 我们不需要在这里额外添加样式，除非想覆盖它的 padding
 }
 
-.course-description-frontmatter-custom { // 课程描述的 <p> 标签
-    // ... (已有的字体、颜色等样式) ...
-    // 移除之前的内联样式 margin-top: 0.5rem; (在 HTML 中移除)
-    margin-top: 25px; // <--- 设置为 15px，这样 15px (margin-top) + 10px (article-meta的padding-bottom) = 25px
-    font-size: 0.9em; // 保持或调整
-    color: var(--grey); // 保持或调整
+.collection-description-frontmatter-custom { // 合集描述的 <p> 标签
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: var(--grey);
 }
 
-.article-hero-image { // 或者 #CourseImage__Hero 如果想用ID选择器
-    // margin-left: auto; // 如果想让它在父容器内右对齐 (如果父容器比它宽)
-    // margin-right: auto; // 和上面配合可以实现居中 (如果父容器比它宽)
-    margin-left: 40px;  // <--- 尝试一个值，例如向右移动 20px
-    // 或者使用百分比: margin-left: 5%;
-
-    // 同时，确保它不是 width: 100% 充满了父容器，否则 margin-left 可能没效果
-    // 如果它的父容器（比如 .article-hero）有 padding-left，图片也会被推向右边。
+.article-hero-image { // 或者 #CollectionImage__Hero 如果想用ID选择器
+    margin-left: 40px;
 }
 
-.course-hero-image {
+.collection-hero-image {
     position: relative !important;
     margin-top: 2rem;
     margin-bottom: 15.5rem;
-    margin-left: 7.1%;  // 向右移动 5%
-    width: 90%;       // 保持宽度为 90%，确保有足够的边距
-    max-width: 944px; // 保持最大宽度限制
-    margin-right: auto; // 确保右边距自动调整
+    margin-left: 7.1%;
+    width: 90%;
+    max-width: 944px;
+    margin-right: auto;
 }
 
 // assets/scss/_custom.scss (或 assets/css/custom.css)
