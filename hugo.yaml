@@ -31,8 +31,8 @@ menu:
     - name: 文 章
       url: /articles/
       weight: 10
-    - name: 课 程
-      url: /courses/
+    - name: 合 集
+      url: /collections/
       weight: 20
     - name: 作 者
       url: /authors/
