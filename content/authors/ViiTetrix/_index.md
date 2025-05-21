@@ -1,7 +1,7 @@
 ---
 title: ViiTetrix
 bio: |
-  当脚印偏离正轨，地平线反而更真了。
+  败了，也要弄明白离终点究竟还有多远。
 avatar: /logo/X.jpg
 featured: true
 params:
