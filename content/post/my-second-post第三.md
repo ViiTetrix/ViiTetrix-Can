@@ -13,7 +13,7 @@ draft: false
 给大家推荐使用 Agentic Company Researcher 这个开源项目，一键自动生成全面公司研究报告。
 
 它集成多个 AI 智能体分别从公司网站、新闻、财报等多种来源收集信息，并结合 Gemini 和 ChatGPT 大模型进行内容筛选与合成，生成一份高质量报告。
-![00](/images/00.jpg)
+![00](/images/00.webp)
 
 GitHub：github.com/pogjester/company-research-agent
 
