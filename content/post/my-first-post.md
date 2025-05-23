@@ -99,6 +99,12 @@ def greet(name):
     print(f"Hello, {name}!")
 ```
 
+```plaintext
+warning: in the working copy of 'themes/novela/assets/scss/articles.scss', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'themes/novela/assets/scss/global.scss', LF will be replaced by CRLF the next time Git touches it
+# 所以能不能正常显示
+```
+
 #### HTML
 
 ```html

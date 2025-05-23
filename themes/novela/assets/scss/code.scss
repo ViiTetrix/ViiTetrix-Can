@@ -1,7 +1,6 @@
 .code-toolbar{
     max-width: 750px;
     margin: 0 auto 35px;
-    overflow: auto;
     font-size: 12px;
 
     pre{
@@ -11,6 +10,8 @@
       padding-right: 5em !important;
       border-radius: 5px !important;
       background-color: #292c34 !important;
+      white-space: pre-wrap !important;
+      word-wrap: break-word !important;
 
       code{
         color: white;
@@ -22,4 +23,14 @@
       top: 1em;
       right: 1em;
     }
+}
+
+@media screen and (max-width: 540px) {
+  .code-toolbar {
+    max-width: 96vw;
+  }
+  .code-toolbar pre {
+    padding-left: 3.8em !important;
+    padding-right: 1em !important;
+  }
 }
