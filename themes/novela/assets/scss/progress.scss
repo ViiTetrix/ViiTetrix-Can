@@ -6,8 +6,8 @@
     margin: 0 auto;
     max-width: 1140px;
     z-index: 0;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
+    left: calc((100% - 800px) / 2 - 171px); /* 根据正文宽度(800px)计算左侧位置 */
     top: 30%;
     -webkit-animation-name: progress-fade-in;
             animation-name: progress-fade-in;
@@ -16,7 +16,19 @@
   
     /*DESKTOP MEDIUM*/
     @media screen and (max-width: $desktop_medium){
-        display: none;
+        left: 20px;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    /*TABLET*/
+    @media screen and (max-width: $tablet){
+        left: 15px;
+    }
+
+    /*PHABLET*/
+    @media screen and (max-width: $phablet){
+        left: 10px;
     }
 }
 
@@ -53,13 +65,18 @@
         -ms-flex-align: center;
             align-items: center;
     height: 100vh;
-    z-index: 3;
+    z-index: 0;
   
     opacity: 1;
     visibility: visible;
     -webkit-transition: opacity 0.4s linear, visibility 0.4s linear;
     -o-transition: opacity 0.4s linear, visibility 0.4s linear;
     transition: opacity 0.4s linear, visibility 0.4s linear;
+
+    /*DESKTOP MEDIUM*/
+    @media screen and (max-width: $desktop_medium){
+        pointer-events: none;
+    }
 }
 
 .overlap-container{
@@ -83,7 +100,6 @@
         -ms-user-select: none;
             user-select: none;
 }
-
 .track-line{
     position: relative;
     display: -webkit-box;
@@ -99,6 +115,25 @@
     background-color: var(--track);
     opacity: 0.6;
     overflow: hidden;
+
+    /*DESKTOP MEDIUM*/
+    @media screen and (max-width: $desktop_medium){
+        height: calc(100vh - 80px);
+        max-height: 500px;
+        opacity: 0.4;
+    }
+
+    /*TABLET*/
+    @media screen and (max-width: $tablet){
+        height: calc(100vh - 60px);
+        max-height: 400px;
+    }
+
+    /*PHABLET*/
+    @media screen and (max-width: $phablet){
+        height: calc(100vh - 40px);
+        max-height: 300px;
+    }
 }
 
 .progress-line{
