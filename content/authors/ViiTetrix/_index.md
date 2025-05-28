@@ -1,7 +1,7 @@
 ---
 title: ViiTetrix
 bio: |
-  败了，也要弄明白离终点究竟还有多远。
+  有用就行~
 avatar: /logo/X.jpg
 featured: true
 params:
