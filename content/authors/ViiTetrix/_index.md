@@ -1,7 +1,7 @@
 ---
 title: ViiTetrix
 bio: |
-  有用就行~
+  要有点不多的追求~
 avatar: /logo/X.jpg
 featured: true
 params:
