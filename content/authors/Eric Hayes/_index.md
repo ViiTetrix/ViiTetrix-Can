@@ -1,5 +1,5 @@
 ---
-title: 
+title: Eric Hayes
 bio: |
   An engineer at a startup。
 avatar: "/logo/author.jpg" # 建议放一个默认头像

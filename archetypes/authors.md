@@ -1,8 +1,8 @@
 ---
-title: 
+title: 作者名称
 bio: |
   一段关于作者的简介。
-avatar: "/logo/default-avatar.jpg" # 建议放一个默认头像
+avatar: "/logo/author.jpg" # 建议放一个默认头像
 featured: false
 params:
   social:
@@ -20,5 +20,5 @@ params:
       url: "https://www.xiaohongshu.com/user/profile/your-id"
     # - title: github
     #   url: "https://github.com/your-id"
-hero: "/images/author/default-hero.jpg" # 建议放一个默认背景图
+hero: "/images/author/author.jpg" # 建议放一个默认背景图
 ---

@@ -1,7 +1,7 @@
 ---
 title: ViiTetrix
 bio: |
-  要有点不多的追求~
+  总要有点为数不多的追求 ~
 avatar: /logo/X.jpg
 featured: true
 params:
