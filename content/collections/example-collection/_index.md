@@ -6,4 +6,6 @@ authors:
     - ViiTetrix
 subtitle: "示例合集的副标题"
 layout: section
+tags:
+    - LLM
 ---

@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="section narrow">
+    <section>
+        <div class="page-header">
+            <h1>Tags</h1>
+        </div>
+        <div id="searchbox">
+            <style>
+                .tag-link {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 5px 10px;
+                    background: transparent !important;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                }
+                .tag-name {
+                    font-size: 2.4rem !important;
+                    font-weight: 500;
+                    font-family: "极影毁片辉宋 Bold", var(--serif) !important;
+                    color: #000 !important;
+                }
+                .tag-count {
+                    margin-left: 4px;
+                    font-size: 1.8rem !important;
+                    opacity: 0.8;
+                    font-family: "极影毁片辉宋 Bold", var(--serif) !important;
+                    color: #000 !important;
+                }
+                .tag-link:hover .tag-name,
+                .tag-link:hover .tag-count {
+                    color: var(--primary) !important;
+                }
+            </style>
+            <div class="tags-list">
+                {{ range .Site.Taxonomies.tags }}
+                <a href="{{ .Page.RelPermalink }}" class="tag-link">
+                    <span class="tag-name">{{ .Page.Title }}</span>
+                    <span class="tag-count">({{ .Count }})</span>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+</section>
+{{ end }} 

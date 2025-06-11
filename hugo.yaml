@@ -5,6 +5,7 @@ theme: novela
 
 taxonomies:
   author: authors
+  tag: tags
 
 # 设置文章页面的分页大小
 params:
@@ -37,6 +38,9 @@ menu:
     - name: 作 者
       url: /authors/
       weight: 30
+    - name: 标 签
+      url: /tags/
+      weight: 35
     - name: 搜 索
       url: /search/
       weight: 40

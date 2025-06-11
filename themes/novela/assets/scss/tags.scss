@@ -1,0 +1,60 @@
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    width: 100%;
+}
+
+.tag-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: var(--card);
+    border-radius: 5px;
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.tag-link:hover {
+    background: var(--primary);
+    color: var(--background-color);
+}
+
+.tag-name {
+    font-size: 1.6rem !important;
+    font-weight: 500;
+}
+
+.tag-count {
+    margin-left: 5px;
+    font-size: 1.4rem !important;
+    opacity: 0.8;
+}
+
+.page-header {
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+
+    h1 {
+        font-family: var(--sanserif);
+        font-size: 38px;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-header {
+        margin-top: 3rem;
+        padding: 0 15px;
+
+        h1 {
+            font-size: 32px;
+        }
+    }
+} 

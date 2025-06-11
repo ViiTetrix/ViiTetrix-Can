@@ -528,3 +528,15 @@
 .footer-spacer{
     margin-bottom: 65px;
 }
+
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.article-tags .tag-link {
+    font-size: 12px;
+    padding: 2px 8px;
+}

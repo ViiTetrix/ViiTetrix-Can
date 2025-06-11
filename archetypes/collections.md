@@ -10,4 +10,6 @@ authors:
     # - AnotherAuthor
 subtitle: "合集副标题"
 layout: section
+tags:
+  - LLM
 ---

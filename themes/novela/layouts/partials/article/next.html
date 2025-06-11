@@ -48,6 +48,15 @@ of the whole section and append them to our $next slice. */}}
                             </p>
                             <div class="article-metadata">
                                 {{ $article.Date | dateFormat "January 2, 2006" }} · {{ $article.ReadingTime }} min read
+                                {{ with $article.Params.tags }}
+                                <div class="article-tags">
+                                    {{ range . }}
+                                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag-link">
+                                        <span class="tag-name">{{ . }}</span>
+                                    </a>
+                                    {{ end }}
+                                </div>
+                                {{ end }}
                             </div>
                         </div>
                     </div>
