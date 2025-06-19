@@ -2,7 +2,7 @@
 title: nostalgebraist
 bio: |
   trees are harlequins, words are harlequins
-avatar: "/logo/nostalgebraist.jpg" # 建议放一个默认头像
+avatar: "/logo/nostalgebraist.jpeg" # 建议放一个默认头像
 featured: false
 params:
   social:
