@@ -1,5 +1,5 @@
 ---
-title: '告别提示词，拥抱上下文工程'
+title: '告别提示词，拥抱上下文工程【译文】'
 authors:
     - Philipp Schmid
 date: '2025-07-04T10:44:47+08:00'
@@ -13,6 +13,8 @@ draft: false
 ---
 
 **原文链接**： [The New Skill in AI is Not Prompting, It's Context Engineering](https://www.philschmid.de/context-engineering)
+
+**原文发布日期**： 2025-06-30
 
 **翻译**： Gemini 2.5 Pro
 
